@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Train Time</title>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="assets/js/logic.js"></script>
+
+</head>
+
+<body>
+
+    <!--Main Navigation-->
+    <header>
+        <div class="container bg-dark text-warning text-center">
+            <h1>Vanderbilt Express</h1>
+            <p>Come ride the trains named after your favorite Robber Baron!!</p>
+        </div>
+    </header>
+    <!--Main Navigation-->
+
+    <!-- Main Layout -->
+    <main>
+        <div class="container">
+            <div class="card bg-dark text-warning">
+                <h3 id="tableLable" class="card-header bg-warning text-dark">Current Train Schedule</h3>
+                <div id="topTable" class="card-body">
+                    <table id="trains" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="card bg-dark text-warning">
+                <h3 id="tableLable" class="card-header bg-warning text-dark">Add Train</h3>
+                <div id="topTable" class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="trainName">Train Name</label>
+                            <input type="text" class="form-control" id="trainName" placeholder="Commodore Express">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" class="form-control" id="destination" placeholder="Nashville, TN">
+                        </div>
+                        <div class="form-group">
+                            <label for="trainTime">First Train Time</label>
+                            <input type="time" class="form-control" id="trainTime" placeholder="15:00">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <input type="number" class="form-control" id="frequency" placeholder="30">
+                        </div>
+                        <button class="btn btn-warning" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Main Layout -->
